@@ -1,0 +1,47 @@
+name: Add-on
+
+# Jobs run on the org's self-hosted Linux runner. RUNNER_LINUX can point them at GitHub-hosted
+# runners.
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  packages: read
+
+concurrency:
+  group: addon-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lint:
+    name: Add-on lint
+    runs-on: ${{ fromJSON(vars.RUNNER_LINUX || '["self-hosted","Linux","X64"]') }}
+    steps:
+      - uses: actions/checkout@v7
+      - uses: frenck/action-addon-linter@v2
+        with:
+          path: ./filemanager
+      - name: Versions agree
+        run: |
+          v=$(sed -n 's/^version: "\(.*\)"/\1/p' filemanager/config.yaml)
+          grep -q "filemanager-server:$v\$" filemanager/Dockerfile
+          test "$(grep -c "filemanager-server:$v\$" filemanager/build.yaml)" = 3
+          grep -q "^## $v\$" filemanager/CHANGELOG.md
+      - name: shellcheck
+        run: docker run --rm -v "$PWD:/mnt:ro" -w /mnt koalaman/shellcheck:stable filemanager/run.sh scripts/test.sh
+
+  test:
+    name: Run as the Supervisor does
+    runs-on: ${{ fromJSON(vars.RUNNER_LINUX || '["self-hosted","Linux","X64"]') }}
+    steps:
+      - uses: actions/checkout@v7
+      - uses: docker/login-action@v4
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - run: scripts/test.sh

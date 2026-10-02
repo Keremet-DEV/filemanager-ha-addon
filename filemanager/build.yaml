@@ -1,0 +1,6 @@
+# The add-on is the server image plus run.sh, which turns the add-on options into FM_* settings.
+# Keep the tag equal to `version` in config.yaml.
+build_from:
+  aarch64: ghcr.io/keremet-dev/filemanager-server:0.1.0
+  amd64: ghcr.io/keremet-dev/filemanager-server:0.1.0
+  armv7: ghcr.io/keremet-dev/filemanager-server:0.1.0
