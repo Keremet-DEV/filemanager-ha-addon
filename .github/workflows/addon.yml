@@ -29,7 +29,7 @@ jobs:
         run: |
           v=$(sed -n 's/^version: "\(.*\)"/\1/p' filemanager/config.yaml)
           grep -q "filemanager-server:$v\$" filemanager/Dockerfile
-          test "$(grep -c "filemanager-server:$v\$" filemanager/build.yaml)" = 3
+          test "$(grep -c "filemanager-server:$v\$" filemanager/build.yaml)" = 2
           grep -q "^## $v\$" filemanager/CHANGELOG.md
       - name: shellcheck
         run: docker run --rm -v "$PWD:/mnt:ro" -w /mnt koalaman/shellcheck:stable filemanager/run.sh scripts/test.sh

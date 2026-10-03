@@ -2,8 +2,8 @@
 
 Сервер [FileManager](https://github.com/Keremet-DEV/filemanager-server) как дополнение Home
 Assistant OS / Supervised: бэкап фото, видео и файлов с телефона, поиск дубликатов,
-освобождение места на устройстве. Работает на amd64, aarch64 (Raspberry Pi 4/5, Green, Yellow)
-и armv7.
+освобождение места на устройстве. Работает на amd64 и aarch64 (Raspberry Pi 4/5, Green, Yellow); armv7 Home Assistant
+больше не поддерживает (с 2025.12).
 
 ## Установка
 
