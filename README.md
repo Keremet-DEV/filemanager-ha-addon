@@ -1,6 +1,6 @@
-# FileManager — дополнение для Home Assistant
+# Sandyk — дополнение для Home Assistant
 
-Сервер [FileManager](https://github.com/Keremet-DEV/filemanager-server) как дополнение Home
+Сервер [Sandyk](https://github.com/Keremet-DEV/filemanager-server) как дополнение Home
 Assistant OS / Supervised: бэкап фото, видео и файлов с телефона, поиск дубликатов,
 освобождение места на устройстве. Работает на amd64 и aarch64 (Raspberry Pi 4/5, Green, Yellow); armv7 Home Assistant
 больше не поддерживает (с 2025.12).
@@ -9,7 +9,7 @@ Assistant OS / Supervised: бэкап фото, видео и файлов с т
 
 1. **Настройки → Дополнения → Магазин дополнений → ⋮ → Репозитории**, добавить
    `https://github.com/Keremet-DEV/filemanager-ha-addon`.
-2. Найти **FileManager**, **Установить**, **Запустить**, **Открыть веб-интерфейс**.
+2. Найти **Sandyk**, **Установить**, **Запустить**, **Открыть веб-интерфейс**.
 3. Первый зарегистрированный пользователь — админ.
 
 Настройки и подробности — [filemanager/DOCS.md](filemanager/DOCS.md) (их же показывает Home

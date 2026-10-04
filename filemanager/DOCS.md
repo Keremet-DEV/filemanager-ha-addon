@@ -1,4 +1,4 @@
-# FileManager
+# Sandyk
 
 Backup of photos, videos and files from phones to your Home Assistant, a duplicate finder,
 and space freed on the phone. Phones at home connect directly; from outside — through a relay,
