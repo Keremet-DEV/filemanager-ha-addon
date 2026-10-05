@@ -28,7 +28,7 @@ local_urls() {
 		 | "http://\(.):\($port)"] | join(",")' || true
 }
 
-FM_DATA_DIR=/data/filemanager
+FM_DATA_DIR=/data/sandyk
 FM_BLOB_DIR="$(opt storage_dir)/blobs"
 FM_ALLOW_SIGNUP=$(opt allow_signup)
 FM_TRASH_DAYS=$(opt trash_days)
@@ -53,5 +53,5 @@ for dir in "$FM_DATA_DIR" "$FM_BLOB_DIR"; do
 	fi
 done
 
-echo "FileManager: data in $FM_DATA_DIR, files in $FM_BLOB_DIR, home addresses: ${FM_LOCAL_URLS:-none}"
-exec su-exec 65532:65532 filemanager
+echo "Sandyk: data in $FM_DATA_DIR, files in $FM_BLOB_DIR, home addresses: ${FM_LOCAL_URLS:-none}"
+exec su-exec 65532:65532 sandyk

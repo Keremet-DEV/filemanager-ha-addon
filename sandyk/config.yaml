@@ -1,8 +1,8 @@
 name: Sandyk
-version: "0.1.0"
-slug: filemanager
+version: "0.2.0"
+slug: sandyk
 description: Photo, video and file backup from phones, duplicate finder, space on the phone freed
-url: https://github.com/Keremet-DEV/filemanager-ha-addon
+url: https://github.com/Keremet-DEV/sandyk-ha-addon
 arch:
   - aarch64
   - amd64
@@ -21,7 +21,7 @@ map:
 backup_exclude:
   - "*/blobs/*"
 options:
-  storage_dir: /share/filemanager
+  storage_dir: /share/sandyk
   local_urls: []
   allow_signup: false
   trash_days: 30

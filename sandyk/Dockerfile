@@ -1,4 +1,4 @@
-ARG BUILD_FROM=ghcr.io/keremet-dev/filemanager-server:0.1.0
+ARG BUILD_FROM=ghcr.io/keremet-dev/sandyk-server:0.2.0
 # hadolint ignore=DL3006
 FROM $BUILD_FROM
 

@@ -14,8 +14,8 @@ no public IP needed.
 ## Options
 
 - **Where to keep files** (`storage_dir`): photos, videos and files, by default
-  `/share/filemanager`. An external drive works: mount it in **Settings → System → Storage**
-  and point this to `/media/<drive>/filemanager`. Moving it later: stop the add-on, move the
+  `/share/sandyk`. An external drive works: mount it in **Settings → System → Storage**
+  and point this to `/media/<drive>/sandyk`. Moving it later: stop the add-on, move the
   `blobs` folder, change the option, start.
 - **Home addresses** (`local_urls`): left empty, the add-on announces the host's addresses with
   the published port, so phones at home skip the relay.
