@@ -7,7 +7,7 @@ configuration:
     description: По каким адресам телефон находит сервер дома, например http://192.168.1.10:8080. Пусто — адреса хоста.
   relay_url:
     name: Адрес relay
-    description: Доступ снаружи без белого IP, например wss://r.ll.kg. Туннель выдаёт владелец relay.
+    description: Доступ снаружи без белого IP, например wss://sandyk.cloud/tunnel. Туннель выдаёт владелец relay.
   relay_token:
     name: Токен relay
     description: Токен туннеля от владельца relay.
